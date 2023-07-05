@@ -1,9 +1,11 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import { Link } from 'gatsby'
-import styles from '../styles/home.module.css'
+import { Link, graphql } from "gatsby";
+import * as styles from "../styles/home.module.css";
 
 const IndexPage = () => {
+  // console.log(data)
+  
   return (
     // <main >
     //   {/* <h1 style={headingStyles}>
@@ -57,8 +59,16 @@ const IndexPage = () => {
           <h2>Design</h2>
           <h3>Develop & Deploy</h3>
           <p>UX designer & web developer based in Manchester.</p>
-          <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
+          <Link className={styles.btn} to="/projects">
+            My Projects
+          </Link>
         </div>
+        <img
+          src="./static/banner.jpg"
+          alt="site banner"
+          style={{ maxWidth: "100%" }}
+        />
+      
       </section>
     </Layout>
   );
@@ -67,3 +77,5 @@ const IndexPage = () => {
 export default IndexPage;
 
 // export const Head = () => <title>Home Page</title>
+
+

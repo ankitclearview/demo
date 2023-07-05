@@ -12,7 +12,7 @@ const Layout = ({children}) => {
         { children }
       </div>
       <footer>
-        <p>Copyright 2021 </p>
+        <p>Copyright 2023 </p>
       </footer>
     </div>
   )

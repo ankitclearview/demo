@@ -3,8 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `gatsby site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Gatsby project",
+    description: "web dev Gatsby",
+    copyright: "This website is gatsby   ",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -20,21 +21,22 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        // The unique name for each instance
+        name: `notes`,
+        // Path to the directory
+        path: `${__dirname}/src/notes/`,
       },
-      __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
       },
-      __key: "pages",
     },
+
     {
       resolve: `gatsby-source-drupal`,
       options: {
